@@ -1,0 +1,91 @@
+@font-face {
+	font-family: "Pixel";
+	src: url("../assets/Pixel-UniCode.ttf");
+	font-display: swap; /* for better performance */
+	/* src: url("../assets/Monocraft.otf") format("opentype");
+    /* src: url("../assets/scientifica.ttf") format("truetype"); */
+	/* src: url("../assets/Pixellari.ttf"); */
+}
+
+* {
+	font-family: "Pixel";
+	-webkit-tap-highlight-color: transparent;
+	font-size: 32px;
+	letter-spacing: 0.05em;
+}
+
+@media screen and (max-width: 600px) {
+	* {
+		font-size: 24px;
+	}
+}
+
+h1 {
+	font-size: 2rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+}
+
+h1 > #anchor {
+	font-size: 2rem;
+}
+
+h2 > #anchor {
+	font-size: 1.5rem;
+}
+
+h3 > #anchor {
+	font-size: 1.25rem;
+}
+
+h1,
+h2,
+h3 {
+	margin-top: -0.25px;
+	margin-bottom: -0.25rem;
+}
+
+a,
+p {
+	font-size: 1rem;
+}
+
+a {
+	color: grey;
+}
+
+a:visited {
+	color: grey;
+}
+
+blockquote {
+	margin: 0;
+	padding: 0.5rem;
+	border-left: 0.25rem solid black;
+	background-color: #f0f0f0;
+}
+
+table {
+	border: 2px solid grey;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+td, th {
+	border: 2px solid gray;
+}
+
+td:first-child {
+	text-align: center;
+}
+
+td:last-child {
+	padding-left: 0.25rem;
+	padding-right: 0.25rem;
+}

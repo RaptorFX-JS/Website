@@ -1,0 +1,27 @@
+---
+title: "Integration - File System"
+author: LePichu
+---
+
+import Embed from "OpenGraphEmbed"
+
+<Embed
+	title="RaptorFX | Integration - File System!"
+	description="Welcome to the documentation for RaptorFX!"
+/>
+
+# File System
+The File System in a RaptorFX application can be managed by two ways; the first one is by using the [File System Access API](https://wicg.github.io/file-system-access/) or via how [Deno handles files](https://deno.land/manual@v1.12.2/examples/read_write_files).
+
+```js
+// Using Deno API
+await Deno.permissions.request({ name: "write" }).then(x => {
+    if(x.state === "granted") Deno.writeTextFileSync("hello.txt", "Hello world!")
+})
+
+// Using File System Access API
+const handle = await window.showSaveFilePicker()
+const file = await handle.createWritable()
+await file.write("Hello world!")
+await file.close()
+```

@@ -1,0 +1,79 @@
+---
+title: "About - Docs"
+author: LePichu
+---
+
+import Embed from "OpenGraphEmbed"
+
+<Embed
+	title="RaptorFX | Documentation!"
+	description="Welcome to the documentation for RaptorFX!"
+/>
+
+# About
+
+---
+
+**RaptorFX** is a **Deno-based framework** for building native apps using [Deno] and System WebViews. It is inspired by Electron, NW.js, Tauri, and the many more that came before it.
+
+> The name is taken a combination of **Raptor + Effects** (shortened to **"FX"**, coming from **JavaFX** as an inspiration).
+
+**RaptorFX** is a modern, web-standards compliant effort at building a native app framework.
+It is built on top of [Deno], and uses the System WebView API to render web content in a native window.
+Best of all, it allows you to use the **Deno** namespace directly in the DOM and allows you to use
+TypeScript directly and natively, transpiling it quickly on the fly using [swc].
+
+[deno]: https://deno.land
+[swc]: https://swc.rs
+
+### Examples!
+A Few examples of what you can do with RaptorFX (using different frameworks!):
+
+- Pushing an User Notification (along [Preact](https://preactjs.com/)):
+```tsx
+import { h, render } from "https://esm.sh/preact@10.11.3"
+
+function notify() {
+    Notification.requestPermission().then((permission) => {
+        if (permission === "granted") {
+            const myNotif = new Notification("Hello World")
+            setTimeout(() => myNotif.close(), 2500)
+        }
+    })
+}
+
+function App() {
+    return <button onClick={notify}>Click Me!</button>
+}
+
+render(<App />, document.body)
+```
+- Writing a File to disk (along [Vue](https://vuejs.org/)):
+```html
+<script>
+let msg = ""
+
+export function writeFile(name) {
+	Deno.writeFile("hello.txt", `Hello, ${name}!`)
+}
+</script>
+
+<template>
+	<input v-model="msg" placeholder="Enter your name!" />
+	<button @click="writeFile(msg)">Click Me!</button>
+</template>
+```
+
+- Displaying User's Device Information (along [Svelte](https://svelte.dev/)):
+```xml
+<script lang="ts">
+    // @ts-ignore "Deno Environment"
+    let info = Deno.build
+</script>
+
+<p>
+    The Device is a {info.os}-{info.vendor} device, 
+    running on {info.arch} architecture with the 
+    LLVM triplet of {info.target} and using the Linker {info.env}.
+</p>
+```

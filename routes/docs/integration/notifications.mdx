@@ -1,0 +1,29 @@
+---
+title: "Integration - Notifications"
+author: LePichu
+---
+
+import Embed from "OpenGraphEmbed"
+
+<Embed
+	title="RaptorFX | Integration - Notifications!"
+	description="Welcome to the documentation for RaptorFX!"
+/>
+
+# Notifications
+In RaptorFX, you can send notifications to the user. This can be achieved quite easily by using the [Web Notifications API](https://notifications.spec.whatwg.org/#api). 
+
+```js
+// Example Code on how to send a Notification!
+Notification.requestPermission().then((permission) => {
+	if (permission === "granted") {
+		const notification = new Notification("Hello World!", {
+			body: "This is a notification!"
+		})
+
+		setTimeout(() => {
+			notification.close()
+		}, 5000);
+	}
+})
+```
