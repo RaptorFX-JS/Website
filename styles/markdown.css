@@ -9,6 +9,8 @@
 
 * {
 	font-family: "Pixel";
+	font-smooth: never;
+	-webkit-font-smoothing: none;
 	-webkit-tap-highlight-color: transparent;
 	font-size: 32px;
 	letter-spacing: 0.05em;

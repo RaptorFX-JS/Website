@@ -147,6 +147,15 @@
 	opacity: 100%;
 }
 
+.pre-features > h1 {
+	text-align: center;
+}
+
+.pre-features > p {
+	text-align: center;
+	margin-top: -0.5rem;
+}
+
 .team-member,
 .feature {
 	border: 2px solid grey;
@@ -198,6 +207,10 @@
 
 .feature-icon:hover {
 	opacity: 100%;
+}
+
+.feature-text {
+	text-align: center;
 }
 
 .team-member-img-container,

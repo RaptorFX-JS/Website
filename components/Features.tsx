@@ -19,8 +19,8 @@ export default function Features(features: IFeatures) {
 			</div>
 			<hr />
 			<div>
-				<h3>{features.title}</h3>
-				<p>{features.description}</p>
+				<h3 className="feature-text">{features.title}</h3>
+				<p className="feature-text">{features.description}</p>
 			</div>
 		</div>
 	)

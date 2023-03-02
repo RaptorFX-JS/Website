@@ -1,6 +1,8 @@
 import { serve } from "aleph/react-server"
 import MDXLoader from "aleph/react/mdx-loader"
 import routes from "~/routes/_export.ts"
+import unocss from "aleph/unocss"
+import presetUno from "@unocss/preset-uno"
 
 // check https://mdxjs.com/docs/extending-mdx
 import remarkFrontmatter from "https://esm.sh/remark-frontmatter@4.0.1"
@@ -22,5 +24,10 @@ serve({
 		glob: "./routes/**/*.{tsx,mdx,md}",
 		routes
 	},
-	ssr: true
+	ssr: true,
+	atomicCSS: unocss({
+		presets: [
+			presetUno()
+		]
+	})
 })

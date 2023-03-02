@@ -7,7 +7,7 @@ const features: IFeatures[] = [
 	{
 		title: "Web Standards",
 		description:
-			"Built on Web Standards and Technologies, RaptorFX can use many modern APIs like fetch and Web Push.",
+			"Based on Web Standards and Technologies, RaptorFX can use many modern APIs like fetch and Web Push.",
 		icon: "web"
 	},
 	{
@@ -23,9 +23,9 @@ const features: IFeatures[] = [
 		icon: "open"
 	},
 	{
-		title: "Deno",
+		title: "Deno-Powered",
 		description:
-			"Built on top of Deno, RaptorFX is built to be fast, secure, and reliable.",
+			"Powered by Deno, RaptorFX is built to be as efficient as possible, including being fast, secure, and reliable.",
 		icon: "deno"
 	}
 ]
@@ -36,6 +36,10 @@ export default function Index() {
 			<Embed />
 			<Hero />
 			<section className="index">
+				<div className="pre-features">
+					<h1>Cross-Platform Apps made Easy~!</h1>
+					<p>RaptorFX makes the hard parts easy so you can focus on delivering!</p>
+				</div>
 				<Standout title="Features" />
 				<div className="features">
 					{features.map((feature) => (
