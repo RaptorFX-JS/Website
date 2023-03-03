@@ -2,6 +2,7 @@ export interface IFeatures {
 	title: string
 	description: string
 	icon: string
+	alt: string
 }
 
 export default function Feature(features: IFeatures) {
@@ -11,7 +12,7 @@ export default function Feature(features: IFeatures) {
 				<div className="feature-icon-glow-container">
 					<img
 						src={`/assets/icons/${features.icon}.png`}
-						alt={features.title}
+						alt={features.alt}
 						className="h-16 w-16 opacity-50 image-render-pixel duration-[250ms] hover:opacity-100"
 					/>
 				</div>

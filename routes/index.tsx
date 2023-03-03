@@ -7,25 +7,29 @@ const features: IFeatures[] = [
 		title: "Web Standards",
 		description:
 			"Based on Web Standards and Technologies, RaptorFX can use many modern APIs like fetch and Web Push.",
-		icon: "web"
+		icon: "web",
+		alt: "Pixel Art of the Globe"
 	},
 	{
 		title: "Cross-Platform",
 		description:
 			"RaptorFX is built to run on all 5 major operating systems; Windows, Mac, Linux, Android, and iOS.",
-		icon: "cross"
+		icon: "cross",
+		alt: "Pixel Art of Generic Monitor with Phone"
 	},
 	{
 		title: "Open Source",
 		description:
 			"Built upon and as open source, RaptorFX is licensed under the MIT License, meaning you can use it for free!",
-		icon: "open"
+		icon: "open",
+		alt: "Pixel Art of OSI Logo / Open Source Icon"
 	},
 	{
 		title: "Deno-Powered",
 		description:
 			"Powered by Deno, RaptorFX is built to be as efficient as possible, including being fast, secure, and reliable.",
-		icon: "deno"
+		icon: "deno",
+		alt: "Pixel Art of the Deno Logo"
 	}
 ]
 

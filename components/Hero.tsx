@@ -22,7 +22,7 @@ export default function Hero() {
 						<Link
 							key={y}
 							to={y}
-							className="max-w-full m-2 p-2 text-white no-underline text-center text-[1.5rem] border-[2.5px] border-solid border-white visited:text-white hover:bg-white hover:visited:text-black duration-[250ms]"
+							className="max-w-full m-2 p-2 text-white no-underline text-center text-[1.5rem] border-[2.5px] border-solid border-white visited:text-white hover:bg-white hover:visited:text-black hover:text-black duration-[250ms]"
 						>
 							{x}
 						</Link>
