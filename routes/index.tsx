@@ -40,7 +40,7 @@ export default function Index() {
 					<p className="m-0">RaptorFX makes the hard parts easy so you can focus on delivering!</p>
 				</div>
 				<h1 className="border-2 border-solid border-[grey] text-center mt-4 mb-4">Features</h1>
-				<div className="grid grid-cols-4 gap-4">
+				<div className="grid grid-cols-1 gap-4 sm:grid-cols-4">
 					{features.map((feature) => (
 						<Feature key={feature.title} {...feature} />
 					))}

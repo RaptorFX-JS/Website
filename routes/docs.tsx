@@ -28,7 +28,7 @@ const nav: Record<string, string | ChildNodes[]> = {
 }
 
 export default function Docs(props: PropsWithChildren) {
-	return <div className="flex flex-row mx-2 w-auto max-w-[100vw] min-h-[80vh]">
+	return <div className="flex flex-col sm:flex-row mx-2 w-auto max-w-[100vw] min-h-[80vh]">
 		<ul className="-ml-2 mt-1">
 			{Object.entries(nav).map(([name, path]) => {
 				if (typeof path === "string") {
@@ -55,7 +55,7 @@ export default function Docs(props: PropsWithChildren) {
 							>
 								{name}
 							</NavLink>
-							<ul className="-ml-3">
+							<ul className="-ml-3 -mb-3">
 								{path.map((x) => (
 									<li>
 										<NavLink
@@ -74,7 +74,7 @@ export default function Docs(props: PropsWithChildren) {
 				}
 			})}
 		</ul>
-		<div className="pl-3 max-w-[calc(100vw-240px)]">
+		<div className="sm:pl-3 sm:max-w-[calc(100vw-240px)]">
 			<MDXProvider components={components}>
 				{props.children}
 			</MDXProvider>

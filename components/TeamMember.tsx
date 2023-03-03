@@ -19,7 +19,7 @@ export default function TeamMember(member: ITeamMember) {
 				<hr />
 				<div>
 					<h3>{member.name}</h3>
-					<p className="min-h-36">{member.description}</p>
+					<p className="sm:min-h-36">{member.description}</p>
 					<hr />
 					<ul>
 						{member.role.map((role) => {
