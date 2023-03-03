@@ -12,7 +12,7 @@ export const Heading: FC<PropsWithChildren<{ id: string; level: number }>> = ({
 		`h${level}`,
 		{ ...rest, id },
 		<>
-			<a className="anchor" href={`#${id}`}>
+			<a className="opacity-25 duration-[250ms] no-underline text-[grey] mr-1 hover:opacity-100" href={`#${id}`}>
 				↝
 			</a>
 			{children}

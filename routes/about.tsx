@@ -39,7 +39,7 @@ export default function About() {
 				title="RaptorFX | About Us!"
 				description="Get to know us a little, this is who we are and how we came to be!"
 			/>
-			<div className="about">
+			<div className="m-2">
 				<h1>About Us!</h1>
 				<hr />
 				<p>
@@ -48,7 +48,7 @@ export default function About() {
 					to Electron but Deno as host instead of what it is today.
 					<br />
 					<br />
-					Starting in Early October of the same year, however, things
+					Starting in Early October of the same year, However, things
 					started to change, the project got rebranded to Brontodroid
 					and focused solely on Android. However, this was bound to
 					change and I decided to go with the multiple-platform
@@ -78,14 +78,14 @@ export default function About() {
 				<hr />
 				<h2>Meet the Team!</h2>
 				<br />
-				<div className="teams">
+				<div className="grid grid-cols-4 gap-4">
 					{team.map((member) => {
 						return <TeamMember {...member} />
 					})}
 				</div>
 				<hr />
-				<h2>Licenses and Credits</h2>
-				<p>
+				<h2 className="m-0">Licenses and Credits</h2>
+				<p className="my-2">
 					- <b>RaptorFX</b> is licensed under the <a href="https://opensource.org/licenses/MIT">MIT License</a>. <br />
 					- <b>Footer Social Media Icons</b> and <b>Frontpage Features Icons</b> are made by <a href="https://twitter.com/pixelstoriez">Pixelstories</a>. <br />
 					- <b>RaptorFX Icon and Banner</b> was made by <a href="https://www.tumblr.com/blog/arathainbutreal">ArathainFarqoe</a> and <a href="https://twitter.com/felipe_does_pxl">FelipeBdC</a>. <br />

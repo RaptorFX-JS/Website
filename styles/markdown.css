@@ -1,7 +1,8 @@
 @font-face {
 	font-family: "Pixel";
 	src: url("../assets/Pixel-UniCode.ttf");
-	font-display: swap; /* for better performance */
+	font-display: swap;
+	/* for better performance */
 	/* src: url("../assets/Monocraft.otf") format("opentype");
     /* src: url("../assets/scientifica.ttf") format("truetype"); */
 	/* src: url("../assets/Pixellari.ttf"); */
@@ -34,23 +35,22 @@ h3 {
 	font-size: 1.25rem;
 }
 
-h1 > #anchor {
+h1>#anchor {
 	font-size: 2rem;
 }
 
-h2 > #anchor {
+h2>#anchor {
 	font-size: 1.5rem;
 }
 
-h3 > #anchor {
+h3>#anchor {
 	font-size: 1.25rem;
 }
 
 h1,
 h2,
 h3 {
-	margin-top: -0.25px;
-	margin-bottom: -0.25rem;
+	margin: 0px;
 }
 
 a,
@@ -79,7 +79,8 @@ table {
 	width: 100%;
 }
 
-td, th {
+td,
+th {
 	border: 2px solid gray;
 }
 

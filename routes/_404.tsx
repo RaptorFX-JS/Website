@@ -8,10 +8,10 @@ export default function E404() {
 				title="RaptorFX | 404!"
 				description="Whoops! We could not find what you were looking for! :("
 			/>
-			<div className="e404">
-				<div className="e404-inner">
+			<div className="min-h-[80vh] flex p-2 flex-col justify-center items-center">
+				<div className="border-2 border-solid border-[grey] p-4 text-center">
 					<h3>Ooooooops, nothing here!</h3>
-					<p>
+					<p className="m-0">
 						<Link to="/">Go back to the homepage</Link>
 					</p>
 				</div>

@@ -20,8 +20,8 @@ const blogPosts: IBlogPost[] = [
 ]
 
 function BlogPost(post: IBlogPost) {
-	const description = post.description ? <p>{post.description}</p> : null
-	return <div className="blog-post-container">
+	const description = post.description ? <p className="my-1">{post.description}</p> : null
+	return <div className="border-2 border-solid border-[grey] p-2 mb-2">
 		<Link to={post.slug}>{post.title}</Link>
 		{description}
 	</div>

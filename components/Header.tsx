@@ -6,13 +6,12 @@ export default function Header() {
 	return (
 		<>
 			<header>
-				<nav className="header-nav">
-					<Link to={"/"} className="header-nav-img">
+				<nav className="flex justify-between items-center">
+					<Link to={"/"} className="h-8 w-8">
 						<img
 							src="/assets/logo.png"
 							alt="RaptorFX logo"
-							width="64"
-							height="64"
+							className="h-8 w-8"
 						/>
 					</Link>
 					<div>
@@ -20,8 +19,7 @@ export default function Header() {
 							<Link
 								key={x}
 								to={`/${x.toLowerCase()}`}
-								className="header-nav-links"
-								id={`header-nav-link-{${x.toLowerCase()}}`}
+								className="text-white text-base m-2 no-underline visited:text-white"
 							>
 								{x}
 							</Link>

@@ -28,6 +28,18 @@ serve({
 	atomicCSS: unocss({
 		presets: [
 			presetUno()
-		]
+		],
+		theme: {
+			extend: {
+				screens: {
+					"mobile": {
+						max: "300"
+					},
+					"tablet": {
+						min: "600"
+					}
+				}	
+			}
+		}
 	})
 })

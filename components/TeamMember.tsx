@@ -8,20 +8,20 @@ export interface ITeamMember {
 export default function TeamMember(member: ITeamMember) {
 	return (
 		<>
-			<div className="team-member">
-				<div className="team-member-img-container">
+			<div className="border-2 border-solid border-[grey] p-2">
+				<div className="flex justify-center items-center p-0">
 					<img
 						src={`/assets/pfp/${member.image}.png`}
 						alt={member.name}
-						className="team-member-img"
+						className="h-16 w-16 rounded-full"
 					/>
 				</div>
 				<hr />
 				<div>
 					<h3>{member.name}</h3>
-					<p className="team-member-desc">{member.description}</p>
+					<p className="min-h-36">{member.description}</p>
 					<hr />
-					<ul className="team-member-list">
+					<ul>
 						{member.role.map((role) => {
 							return <li>{role}</li>
 						})}

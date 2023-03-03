@@ -28,14 +28,14 @@ const nav: Record<string, string | ChildNodes[]> = {
 }
 
 export default function Docs(props: PropsWithChildren) {
-	return <div className="docs">
-		<ul className="docs-list">
+	return <div className="flex flex-row mx-2 w-auto max-w-[100vw] min-h-[80vh]">
+		<ul className="-ml-2 mt-1">
 			{Object.entries(nav).map(([name, path]) => {
 				if (typeof path === "string") {
 					return (
 						<li>
 							<NavLink
-								className="docs-item"
+								className="no-underline text-xs text-black visited:text-black"
 								to={path}
 								activeClassName="active"
 								exact
@@ -48,18 +48,18 @@ export default function Docs(props: PropsWithChildren) {
 					return (
 						<li>
 							<NavLink
-								className="docs-item"
+								className="no-underline text-xs text-black visited:text-black"
 								to={`/docs/${name.toLowerCase()}`}
 								activeClassName="active"
 								exact
 							>
 								{name}
 							</NavLink>
-							<ul className="docs-list-inner">
+							<ul className="-ml-3">
 								{path.map((x) => (
 									<li>
 										<NavLink
-											className="docs-item"
+											className="no-underline text-xs text-black visited:text-black"
 											to={x.path}
 											activeClassName="active"
 											exact
@@ -74,7 +74,7 @@ export default function Docs(props: PropsWithChildren) {
 				}
 			})}
 		</ul>
-		<div className="markdown-body">
+		<div className="pl-3 max-w-[calc(100vw-240px)]">
 			<MDXProvider components={components}>
 				{props.children}
 			</MDXProvider>

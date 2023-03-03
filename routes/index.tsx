@@ -1,7 +1,6 @@
 import Hero from "~/components/Hero.tsx"
-import Feature, { IFeatures } from "~/components/Features.tsx"
+import Feature, { IFeatures } from "~/components/Feature.tsx"
 import Embed from "~/components/OpenGraphEmbed.tsx"
-import Standout from "~/components/StandoutHeading.tsx"
 
 const features: IFeatures[] = [
 	{
@@ -35,13 +34,13 @@ export default function Index() {
 		<>
 			<Embed />
 			<Hero />
-			<section className="index">
-				<div className="pre-features">
+			<section className="p-2">
+				<div className="text-center">
 					<h1>Cross-Platform Apps made Easy~!</h1>
-					<p>RaptorFX makes the hard parts easy so you can focus on delivering!</p>
+					<p className="m-0">RaptorFX makes the hard parts easy so you can focus on delivering!</p>
 				</div>
-				<Standout title="Features" />
-				<div className="features">
+				<h1 className="border-2 border-solid border-[grey] text-center mt-4 mb-4">Features</h1>
+				<div className="grid grid-cols-4 gap-4">
 					{features.map((feature) => (
 						<Feature key={feature.title} {...feature} />
 					))}
