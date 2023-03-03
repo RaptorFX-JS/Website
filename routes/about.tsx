@@ -78,7 +78,7 @@ export default function About() {
 				<hr />
 				<h2>Meet the Team!</h2>
 				<br />
-				<div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
+				<div className="grid grid-cols-1 lg:grid-cols-4 grid-fold gap-4">
 					{team.map((member) => {
 						return <TeamMember {...member} />
 					})}

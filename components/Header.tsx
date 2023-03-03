@@ -11,7 +11,7 @@ export default function Header() {
 						<img
 							src="/assets/logo.png"
 							alt="RaptorFX logo"
-							className="h-8 w-8"
+							className="h-8 w-8 image-render-pixel"
 						/>
 					</Link>
 					<div>

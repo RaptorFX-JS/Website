@@ -15,7 +15,7 @@ export default function Hero() {
 					className="w-[80vw] image-render-pixel sm:-m-8"
 				/>
 
-				<h1 className="text-center text-white mb-4 text-xl sm:mt-2 sm:text-[2rem]">A Modern-Denofied Solution to Building Apps!</h1>
+				<h1 className="text-center text-white mb-4 text-xl sm:mt-4 sm:text-[2rem]">A Modern-Denofied Solution to Building Apps!</h1>
 				
 				<div className="grid gap-1 grid-cols-1 min-w-full sm:grid-cols-2 sm:min-w-0">
 					{Object.entries(heroButtons).map(([x, y]) => (

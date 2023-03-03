@@ -17,29 +17,17 @@ serve({
 			remarkPlugins: [remarkFrontmatter, remarkGFM],
 			// @ts-ignore "useless error; works fine."
 			rehypePlugins: [rehypeHighlight, rehypeSlug],
-			providerImportSource: "@mdx-js/react"
-		})
+			providerImportSource: "@mdx-js/react",
+		}),
 	],
 	router: {
 		glob: "./routes/**/*.{tsx,mdx,md}",
-		routes
+		routes,
 	},
 	ssr: true,
 	atomicCSS: unocss({
 		presets: [
-			presetUno()
-		],
-		theme: {
-			extend: {
-				screens: {
-					"mobile": {
-						max: "300"
-					},
-					"tablet": {
-						min: "600"
-					}
-				}	
-			}
-		}
-	})
+			presetUno(),
+		]
+	}),
 })

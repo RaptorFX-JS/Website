@@ -32,3 +32,9 @@ header {
 	padding: 0.5rem;
 	background-color: black;
 }
+
+@media (any-pointer: coarse) and (min-width: 768px) {
+	.grid-fold {
+		grid-template-columns: repeat(2, 1fr) !important;
+	}
+}
