@@ -35,7 +35,7 @@ export default function Docs(props: PropsWithChildren) {
 					return (
 						<li>
 							<NavLink
-								className="no-underline text-xs text-black visited:text-black"
+								className="docs-item"
 								to={path}
 								activeClassName="active"
 								exact
@@ -48,7 +48,7 @@ export default function Docs(props: PropsWithChildren) {
 					return (
 						<li>
 							<NavLink
-								className="no-underline text-xs text-black visited:text-black"
+								className="docs-item"
 								to={`/docs/${name.toLowerCase()}`}
 								activeClassName="active"
 								exact
@@ -59,7 +59,7 @@ export default function Docs(props: PropsWithChildren) {
 								{path.map((x) => (
 									<li>
 										<NavLink
-											className="no-underline text-xs text-black visited:text-black"
+											className="docs-item"
 											to={x.path}
 											activeClassName="active"
 											exact

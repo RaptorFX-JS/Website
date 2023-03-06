@@ -28,6 +28,22 @@ serve({
 	atomicCSS: unocss({
 		presets: [
 			presetUno(),
+		],
+		shortcuts: {
+			"docs-item":
+				"no-underline text-base sm:text-xs text-black visited:text-black",
+		},
+		rules: [
+			[
+				/touch-grid-cols-2/,
+				() => `
+				@media (any-pointer: coarse) and (min-width: 768px) {
+					.touch-grid-cols-2 {
+						grid-template-columns: repeat(2, 1fr);
+					}
+				}
+				`
+			]
 		]
 	}),
 })
