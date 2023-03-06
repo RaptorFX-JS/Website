@@ -25,7 +25,8 @@ serve({
 		routes,
 	},
 	ssr: true,
-	atomicCSS: unocss({
+	atomicCSS: unocss(/\.(jsx|tsx|mdx)$/, {
+		resetCSS: false,
 		presets: [
 			presetUno(),
 		],
@@ -39,7 +40,7 @@ serve({
 				() => `
 				@media (any-pointer: coarse) and (min-width: 768px) {
 					.touch-grid-cols-2 {
-						grid-template-columns: repeat(2, 1fr);
+						grid-template-columns: repeat(2, 1fr) !important;
 					}
 				}
 				`
